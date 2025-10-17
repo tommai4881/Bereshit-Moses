@@ -71,15 +71,15 @@ Authoritative Basis|Implicit Mosaic history; compilation (DH).|Moses 1: Visionar
 |Satan/The Fall|Serpent is "subtle" (Gen 3:1). Motivation is implicit.|Detailed Council in Heaven, identifies Lucifer, clarifies the struggle over human agency (Moses 4:1-4).|Establishes the existence of pre-mortal life and the eternal law of agency.|
 |The Priesthood/Gospel|Implied necessity of sacrifice (Gen 4); no explicit plan.|Explicitly taught to Adam, requires baptism, Holy Ghost, and centers entirely on the Son (Moses 5:6-12).|Establishes the "ancient nature of the Gospel," ensuring prophets beginning with Adam had the fullness of Christ's doctrine.|
 |Enoch's Biography|Walks with God; is taken (Gen 5:24).|Detailed visions of the Millennium, Christ's atonement, Enoch’s successful ministry, and the city of Zion's translation (Moses 6-7).|Provides the scriptural archetype of collective salvation and prophetic success.|
-# IV. Historical and Source Critical Implications: Antiquity vs. Restoration
+## IV. Historical and Source Critical Implications: Antiquity vs. Restoration
 The emergence of the Book of Moses in 1830 coincided with the rise of historical-critical methods in biblical scholarship, which often questioned traditional authorship claims. The Book of Moses’s relationship to antiquity and modern criticism is complex, requiring engagement with both the Documentary Hypothesis (DH) and ancient literary parallels.
 
-## IV.A. The Challenge to the Documentary Hypothesis
+### IV.A. The Challenge to the Documentary Hypothesis
 The JST was revealed during a period when scholars like Jean Astruc and later Julius Wellhausen were advancing theories that the Pentateuch was compiled from various independent documents, arguing against the historical validity of Mosaic authorship.
 
 The doctrinal assertion in the Book of Moses that God commanded Moses to write the record 6 and its subsequent claim to restore content that was "taken" from the original text 4 functions as a direct, theological challenge to the DH. If, as the JST posits, the text was given to Moses in vision and subsequently corrupted during transmission (losing plain and precious things), then the inconsistencies identified by critics—such as the two creation accounts or differing divine names—are evidence not of disparate sources, but of post-Mosaic textual entropy. The structure of the Book of Moses, therefore, presents a revelatory model wherein the text must be restored to its pre-corrupted, unified Mosaic form, thereby validating the historical reality of the ancient prophet and his sacred writings.
 
-## IV.B. Ancient Literary Affinities (Pseudepigrapha and Brass Plates)
+### IV.B. Ancient Literary Affinities (Pseudepigrapha and Brass Plates)
 The extensive expansions found in Moses 1, 6, and 7 exhibit striking thematic parallels with Jewish literature from the Intertestamental Period, often classified as Pseudepigrapha (e.g., the Book of Enoch, Jubilees).17 These writings also elaborate on the primeval history encompassed by *Bereshit*. For instance, the Book of Jubilees also features the instruction for Moses to record what he sees in vision, echoing the framing device of Moses 1.
 
 The Enoch sections in Moses 6–7, in particular, provide detail on Enoch’s preaching, his translation, and his visionary experiences that resonate strongly with the Ethiopic Book of Enoch. While some critical views suggest Joseph Smith may have inadvertently or deliberately drawn from contemporary knowledge of these expanded traditions, many scholars observe that the Book of Moses integrates these expanded narratives into a contextually and doctrinally sophisticated system that exceeds known ancient or contemporary sources.
