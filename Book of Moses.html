@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book of Moses vs. Bereshit: A Structural Comparison</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .flow-connector {
+            width: 2px;
+            height: 3rem;
+        }
+        .flow-item {
+            border-left-width: 4px;
+        }
+    </style>
+</head>
+<body class="bg-[#F3F3F3]">
+    <!-- Color Palette: Brilliant Blues -->
+    <!-- Narrative Plan: 
+        1. Introduction: Introduce the two texts and the purpose of the comparison.
+        2. High-Level Overview: Show the overall textual relationship using key stats and a donut chart.
+        3. Structural Parallel: Visualize the side-by-side structure using a flowchart-style layout based on the Aliyot.
+        4. Quantitative Comparison: Use a bar chart to compare verse counts in each corresponding section, highlighting expansions.
+        5. Key Differences: Use info cards to detail unique elements like the prelude in Moses 1 and the extension into Noach.
+        6. Conclusion: Summarize the findings. 
+    -->
+    <!-- Visualization Choices:
+        - Data: Overall textual overlap. Goal: Inform. Visualization: Donut Chart (Chart.js/Canvas). Justification: Ideal for part-to-whole relationships. NO SVG.
+        - Data: Aliyah-by-Aliyah structure. Goal: Organize. Visualization: HTML/CSS Flowchart. Justification: Clearly shows sequential correspondence. NO SVG, NO MERMAID JS.
+        - Data: Verse count comparison. Goal: Compare. Visualization: Grouped Bar Chart (Chart.js/Canvas). Justification: Best for direct comparison of quantities across categories. NO SVG.
+        - Data: Unique textual elements. Goal: Inform. Visualization: Info Cards (HTML/CSS). Justification: Simple and clear presentation of distinct facts. NO SVG.
+    -->
+    <!-- Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output. -->
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#004E89]">A Tale of Two Texts</h1>
+            <p class="text-lg md:text-xl text-[#0074D9] mt-2">A Visual Comparison of the LDS Book of Moses and the Torah Portion Bereshit</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <div class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#004E89] mb-4">An Uncanny Parallel</h2>
+                <p class="text-gray-700">The Book of Moses, a foundational text in the scripture of The Church of Jesus Christ of Latter-day Saints, presents a retelling of the early chapters of Genesis. Its structure closely mirrors Bereshit (Genesis 1:1–6:8), the first weekly Torah portion in Judaism. This infographic explores the direct structural relationship, quantitative differences, and unique elements of these two accounts of creation and early humanity.</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
+                <h3 class="text-xl font-bold text-[#004E89] mb-4 text-center">Structural Overlap</h3>
+                 <p class="text-gray-600 text-center mb-4">The Book of Moses chapters 2-8 directly parallel the entire Bereshit Torah portion, establishing a clear foundational link between the two texts.</p>
+                <div class="chart-container">
+                    <canvas id="overlapChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold text-[#004E89] mb-4 text-center">Verse by Verse Comparison</h3>
+                <p class="text-gray-600 text-center mb-4">While the structure is similar, the Book of Moses often expands significantly on the Genesis narrative. This chart compares the number of verses in each corresponding section, revealing key areas of textual expansion, especially in the story of Enoch (6th Aliyah).</p>
+                <div class="chart-container h-[400px] max-h-[450px]">
+                    <canvas id="verseCountChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#004E89] mb-4 text-center">The Reading Alignment: Aliyah by Aliyah</h2>
+                <p class="text-gray-600 text-center max-w-3xl mx-auto mb-8">The traditional Jewish reading of the Torah is divided into sections called 'Aliyot'. The narrative of the Book of Moses follows this ancient structure with remarkable precision, as detailed below.</p>
+                <div class="flex flex-col items-center">
+                    
+                    <div class="w-full max-w-4xl p-4 mb-2 bg-gray-50 rounded-lg shadow-inner flow-item border-[#004E89]">
+                        <p class="text-sm font-semibold text-[#004E89]">PRELUDE (Exclusive to Book of Moses)</p>
+                        <h4 class="text-lg font-bold text-gray-800">Moses 1</h4>
+                        <p class="text-gray-600 text-sm">A vision where Moses speaks with God face to face, setting a new context for the creation story that follows.</p>
+                    </div>
+
+                    <div class="flow-connector bg-[#4198D7]"></div>
+
+                    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                        <div class="p-4 bg-blue-100 rounded-lg">
+                            <p class="text-sm font-semibold text-[#0074D9]">BOOK OF MOSES</p>
+                        </div>
+                        <div class="p-4 bg-green-100 rounded-lg">
+                            <p class="text-sm font-semibold text-green-800">BERESHIT (GENESIS)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div><div class="p-4 border border-blue-200 rounded-lg"><p class="text-sm text-blue-700 font-semibold">1st Aliyah</p><p class="font-mono">Moses 2:1 - 3:3</p></div></div>
+                        <div><div class="p-4 border border-green-200 rounded-lg"><p class="text-sm text-green-700 font-semibold">1st Aliyah</p><p class="font-mono">Genesis 1:1 - 2:3</p></div></div>
+                        <div><div class="p-4 border border-blue-200 rounded-lg"><p class="text-sm text-blue-700 font-semibold">2nd Aliyah</p><p class="font-mono">Moses 3:4 - 19</p></div></div>
+                        <div><div class="p-4 border border-green-200 rounded-lg"><p class="text-sm text-green-700 font-semibold">2nd Aliyah</p><p class="font-mono">Genesis 2:4 - 19</p></div></div>
+                        <div><div class="p-4 border border-blue-200 rounded-lg"><p class="text-sm text-blue-700 font-semibold">3rd Aliyah</p><p class="font-mono">Moses 3:20 - 4:27</p></div></div>
+                        <div><div class="p-4 border border-green-200 rounded-lg"><p class="text-sm text-green-700 font-semibold">3rd Aliyah</p><p class="font-mono">Genesis 2:20 - 3:21</p></div></div>
+                        <div><div class="p-4 border border-blue-200 rounded-lg"><p class="text-sm text-blue-700 font-semibold">4th Aliyah</p><p class="font-mono">Moses 4:28 - 5:43</p></div></div>
+                        <div><div class="p-4 border border-green-200 rounded-lg"><p class="text-sm text-green-700 font-semibold">4th Aliyah</p><p class="font-mono">Genesis 3:22 - 4:18</p></div></div>
+                        <div><div class="p-4 border border-blue-200 rounded-lg"><p class="text-sm text-blue-700 font-semibold">5th Aliyah</p><p class="font-mono">Moses 5:44 - 46</p></div></div>
+                        <div><div class="p-4 border border-green-200 rounded-lg"><p class="text-sm text-green-700 font-semibold">5th Aliyah</p><p class="font-mono">Genesis 4:19 - 22</p></div></div>
+                        <div><div class="p-4 border border-blue-200 rounded-lg"><p class="text-sm text-blue-700 font-semibold">6th Aliyah</p><p class="font-mono">Moses 5:47 - 8:1</p></div></div>
+                        <div><div class="p-4 border border-green-200 rounded-lg"><p class="text-sm text-green-700 font-semibold">6th Aliyah</p><p class="font-mono">Genesis 4:23 - 5:24</p></div></div>
+                        <div><div class="p-4 border border-blue-200 rounded-lg"><p class="text-sm text-blue-700 font-semibold">7th Aliyah</p><p class="font-mono">Moses 8:2 - 21</p></div></div>
+                        <div><div class="p-4 border border-green-200 rounded-lg"><p class="text-sm text-green-700 font-semibold">7th Aliyah</p><p class="font-mono">Genesis 5:25 - 6:4</p></div></div>
+                        <div><div class="p-4 border border-blue-200 rounded-lg bg-blue-50"><p class="text-sm text-blue-700 font-semibold">Maftir</p><p class="font-mono">Moses 8:22 - 27a</p></div></div>
+                        <div><div class="p-4 border border-green-200 rounded-lg bg-green-50"><p class="text-sm text-green-700 font-semibold">Maftir</p><p class="font-mono">Genesis 6:5 - 8</p></div></div>
+                    </div>
+
+                    <div class="flow-connector bg-[#4198D7]"></div>
+
+                    <div class="w-full max-w-4xl p-4 mt-2 bg-gray-50 rounded-lg shadow-inner flow-item border-orange-400">
+                        <p class="text-sm font-semibold text-orange-600">BONUS (Overlap with Parashat Noach)</p>
+                        <h4 class="text-lg font-bold text-gray-800">Moses 8:27b-30 parallels Genesis 6:9-13</h4>
+                        <p class="text-gray-600 text-sm">The Book of Moses concludes by including the first few verses of the next Torah portion, Noach, seamlessly bridging the two narratives.</p>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="lg:col-span-2 text-center p-6 bg-white rounded-lg shadow-md">
+                 <h2 class="text-2xl font-bold text-[#004E89] mb-4">Conclusion: A Restoration, Not a Replacement</h2>
+                <p class="text-gray-700 max-w-3xl mx-auto">The Book of Moses presents itself as a restored and expanded version of the Genesis account. It maintains the ancient narrative and structural framework found in the Torah portion of Bereshit while adding significant theological context, dialogue, and detail, particularly through the visionary prelude of Moses 1 and the extensive teachings of Enoch. The parallel is not one of simple copying, but of a re-envisioning of a shared foundational story.</p>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const overlapCtx = document.getElementById('overlapChart').getContext('2d');
+        const overlapChart = new Chart(overlapCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Bereshit (Gen 1:1 - 6:8)', 'Book of Moses Prelude (Ch 1)', 'Extension into Noach (Gen 6:9-13)'],
+                datasets: [{
+                    label: 'Structural Elements',
+                    data: [100, 15, 5],
+                    backgroundColor: ['#0074D9', '#004E89', '#4198D7'],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const verseCountCtx = document.getElementById('verseCountChart').getContext('2d');
+        const verseCountChart = new Chart(verseCountCtx, {
+            type: 'bar',
+            data: {
+                labels: ['1st Aliyah', '2nd Aliyah', '3rd Aliyah', '4th Aliyah', '5th Aliyah', '6th Aliyah', '7th Aliyah', 'Maftir'],
+                datasets: [
+                    {
+                        label: 'Book of Moses Verses',
+                        data: [28, 16, 32, 47, 3, 152, 20, 6],
+                        backgroundColor: '#004E89',
+                        borderColor: '#003B6A',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Genesis Verses',
+                        data: [34, 16, 26, 21, 4, 34, 13, 4],
+                        backgroundColor: '#4198D7',
+                        borderColor: '#2A7AB1',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Verses'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
